@@ -1,0 +1,175 @@
+/* styles.css - 간단하고 깔끔한 스타일 */
+:root {
+	--bg: #f6f8fa;
+	--card: #ffffff;
+	--accent: #2b8cff;
+	--muted: #666;
+	--success: #1fa94a;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+	background: var(--bg);
+	color: #111;
+}
+.container {
+	max-width: 900px;
+	margin: 28px auto;
+	padding: 16px;
+}
+h1 {
+  text-align: center;
+	margin: 0 0 12px;
+}
+.card {
+	background: rgba(191,230,255, 0.35);
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
+	margin-bottom: 16px;
+}
+.card h2 {
+	margin-top: 0;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+textarea {
+	width: 100%;
+	min-height: 80px;
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+	resize: vertical;
+}
+.row {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.file input {
+	display: block;
+}
+button {
+	padding: 8px 12px;
+	border-radius: 8px;
+	border: 0;
+	cursor: pointer;
+}
+#getLocationBtn {
+  /* background-color: rgba(254,154,81,1); */
+  background-color: rgba(175, 231, 140, 1);
+}
+button.primary {
+	background: var(--accent);
+	color: #fff;
+}
+button.ghost {
+	background: white;
+	border: 1px solid #ddd;
+}
+.leaflet-container {
+	border-radius: 10px;
+	border: 1px solid #e5e7eb;
+}
+#map {
+	width: 100%;
+	min-height: 320px;
+	background: #eef3ff;
+	margin-top: 8px;
+}
+.map {
+  padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
+	margin-bottom: 16px;
+}
+.leaflet-control-attribution {
+	font-size: 10px;
+}
+.muted {
+	color: var(--muted);
+	margin-top: 8px;
+}
+.small {
+	font-size: 12px;
+}
+.app-footer {
+	margin-top: 24px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	align-items: center;
+}
+.app-footer__credit {
+	font-weight: 500;
+}
+.report {
+  padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
+	margin-bottom: 16px;
+}
+#reportsList .report {
+	border-top: 1px dashed #eee;
+	padding: 12px 0;
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+}
+.report img {
+	width: 120px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 6px;
+}
+.report .meta {
+	flex: 1;
+}
+.report .meta .time {
+	color: var(--muted);
+	font-size: 12px;
+}
+.report .actions {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.badge {
+	padding: 4px 8px;
+	border-radius: 999px;
+	font-size: 12px;
+}
+.badge.resolved {
+	background: #e8f6ec;
+	color: var(--success);
+	border: 1px solid #c6efd2;
+}
+.badge.pending {
+	background: #fff7e6;
+	color: #b36b00;
+	border: 1px solid #ffecbf;
+}
+
+small {
+  text-align: center;
+  color: gray
+}
+
+@media (max-width: 600px) {
+	.row {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	#map {
+		min-height: 260px;
+	}
+}
+
+

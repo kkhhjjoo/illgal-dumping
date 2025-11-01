@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>깨끗한 도시만들기</title>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			crossorigin=""
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<h1>깨끗한 도시만들기🌱</h1>
+
+			<section class="card" id="report-form-card">
+				<h2>신고하기📢</h2>
+				<form id="reportForm">
+					<label>
+						설명
+						<textarea
+							id="description"
+							placeholder="장소, 시간, 특이사항(예: 차량번호) 등을 적어주세요."
+						></textarea>
+					</label>
+
+				<div class="row file-row">
+						<label class="file">
+							사진 (선택)
+							<input
+								type="file"
+								id="photo"
+								accept="image/*"
+								capture="environment"
+							/>
+						</label>
+
+						<button type="button" id="getLocationBtn">
+							내 위치 가져오기
+						</button>
+					</div>
+
+					<div id="locationInfo" class="muted">위치: 없음</div>
+
+					<div class="row">
+						<button type="submit" class="primary">신고 전송</button>
+						<button type="reset" class="ghost">초기화</button>
+					</div>
+				</form>
+				<div id="formMsg" class="muted"></div>
+			</section>
+
+			<section class="map">
+				<h2>지도에서 보기</h2>
+				<div id="map" aria-label="신고 지도를 표시합니다."></div>
+				<p class="muted small">
+					지도에서 내 위치와 신고된 위치를 함께 확인할 수 있습니다.
+				</p>
+			</section>
+
+			<section class="report">
+				<h2>최근 신고</h2>
+				<div id="reportsList">불러오는 중…</div>
+			</section>
+
+			<footer class="app-footer muted small">
+				<div>※ 위치 정보와 사진은 신고 처리 용도로만 사용하세요. 개인정보 주의.</div>
+				<small class="app-footer__credit">copyright by CodeCraft</small>
+			</footer>
+		</main>
+
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			crossorigin=""
+		></script>
+
+    
+		<script src="app.js"></script>
+	</body>
+</html>
