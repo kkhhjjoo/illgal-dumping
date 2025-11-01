@@ -1,13 +1,22 @@
 {
   "reports": [
     {
+      "id": "6ju4sJlJ8b",
+      "description": "사당역, 4시, 567나",
+      "lat": 37.450113,
+      "lng": 126.9883451,
+      "photo": "/uploads/1761980748640-PKC_LQ40.png",
+      "createdAt": "2025-11-01T07:05:48.646Z",
+      "resolved": false
+    },
+    {
       "id": "MlzZH4hRex",
       "description": "사당, 12시, 123바",
       "lat": 37.450113,
       "lng": 126.9883451,
       "photo": "/uploads/1761968416868-A8rP_Dls.png",
       "createdAt": "2025-11-01T03:40:16.886Z",
-      "resolved": false
+      "resolved": true
     }
   ]
 }

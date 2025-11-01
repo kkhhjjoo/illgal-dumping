@@ -11,7 +11,9 @@
 }
 body {
 	margin: 0;
-	font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+	font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 	background: var(--bg);
 	color: #111;
 }
@@ -46,9 +48,13 @@ textarea {
 	width: 100%;
 	min-height: 80px;
 	padding: 8px;
+  margin-top: 10px;
 	border-radius: 6px;
 	border: 1px solid #ddd;
 	resize: vertical;
+}
+.row #photo {
+  margin-top: 10px;
 }
 .row {
 	display: flex;
@@ -173,6 +179,15 @@ small {
 }
 
 @media (max-width: 600px) {
+  body {
+    margin-top: -28px;
+  }
+  .container h1 {
+    font-size: 24px;
+  }
+  .card h2 {
+    font-size: 20px;
+  }
 	.row {
 		flex-direction: column;
 		align-items: stretch;
