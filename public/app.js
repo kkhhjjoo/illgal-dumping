@@ -270,7 +270,11 @@ async function loadReports() {
 			return;
 		}
 		reportsList.innerHTML = "";
-		data.reports.forEach((r) => {
+		const sortedReports = [...data.reports].sort((a, b) => {
+			if (!!a.resolved === !!b.resolved) return 0;
+			return a.resolved ? -1 : 1;
+		});
+		sortedReports.forEach((r) => {
 			const div = document.createElement("div");
 			div.className = "report";
 			const photoSrc = r.photo ? `${API_BASE}${r.photo}` : null;
@@ -321,7 +325,7 @@ async function loadReports() {
 				}
 			});
 		});
-		updateReportsMapMarkers(data.reports);
+		updateReportsMapMarkers(sortedReports);
 	} catch (err) {
 		reportsList.innerHTML = `<div class="muted">불러오지 못했습니다.<br><small>${escapeHtml(err.message || "오류가 발생했습니다.")}</small></div>`;
 		updateReportsMapMarkers([]);

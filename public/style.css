@@ -21,14 +21,17 @@ body {
 	padding: 16px;
 }
 h1 {
-  text-align: center;
+	text-align: center;
 	margin: 0 0 12px;
 }
 .card {
-	background: rgba(191,230,255, 0.35);
+	box-shadow:
+    8px 8px 24px rgba(120, 182, 255, 0.08),
+    5px 5px 10px rgba(120, 182, 255, 0.15),
+    inset 1px 1px 0 rgba(120, 182, 255, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 	padding: 16px;
 	border-radius: 10px;
-	box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
 	margin-bottom: 16px;
 }
 .card h2 {
@@ -62,8 +65,8 @@ button {
 	cursor: pointer;
 }
 #getLocationBtn {
-  /* background-color: rgba(254,154,81,1); */
-  background-color: rgba(175, 231, 140, 1);
+	/* background-color: rgba(254,154,81,1); */
+	background-color: rgba(175, 231, 140, 1);
 }
 button.primary {
 	background: var(--accent);
@@ -72,6 +75,14 @@ button.primary {
 button.ghost {
 	background: white;
 	border: 1px solid #ddd;
+}
+
+button.toggleBtn {
+	padding: 4px 10px;
+	border-radius: 15px;
+	height: 30px;
+	font-size: 12px;
+	margin-right: 20px;
 }
 .leaflet-container {
 	border-radius: 10px;
@@ -84,7 +95,7 @@ button.ghost {
 	margin-top: 8px;
 }
 .map {
-  padding: 16px;
+	padding: 16px;
 	border-radius: 10px;
 	box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
 	margin-bottom: 16px;
@@ -111,14 +122,13 @@ button.ghost {
 	font-weight: 500;
 }
 .report {
-  padding: 16px;
+	padding: 16px;
 	border-radius: 10px;
 	box-shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
 	margin-bottom: 16px;
 }
 #reportsList .report {
 	border-top: 1px dashed #eee;
-	padding: 12px 0;
 	display: flex;
 	gap: 12px;
 	align-items: flex-start;
@@ -158,8 +168,8 @@ button.ghost {
 }
 
 small {
-  text-align: center;
-  color: gray
+	text-align: center;
+	color: gray;
 }
 
 @media (max-width: 600px) {
@@ -170,6 +180,8 @@ small {
 	#map {
 		min-height: 260px;
 	}
+	#reportsList .report {
+		display: flex;
+		flex-direction: column;
+	}
 }
-
-
